@@ -70,5 +70,3 @@ export function GetOneProjectThunk(id) {
       });
   };
 }
-
-export function GetProjectsFiltered(keyword)

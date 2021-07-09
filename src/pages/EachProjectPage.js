@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { projects } from "../dummyData/projects";
 
+
 export default function EachProjectPage(props) {
   // #TODO: how do we loop through the array of objects, grabbing the correct
   // knex query to grab the correct project
