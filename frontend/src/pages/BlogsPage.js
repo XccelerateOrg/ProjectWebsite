@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { blogs } from "../dummyData/blogs";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import BlogCard from "../components/BlogCard";
 
 function Card(props) {
   let newPost = props.card.post.slice(0, 100) + "...";
@@ -52,7 +53,7 @@ function BlogsPage() {
   const newBlogs = filteredBlogs(search);
   console.log("new blogs", newBlogs);
   return (
-    <div>
+    <div className="container-fluid">
       <h1>Blogs Page</h1>
       <input
         type="text"
@@ -61,9 +62,23 @@ function BlogsPage() {
         onChange={searchOnChange}
       />
       {/* Render this out based on the specific item we pass in */}
-      {newBlogs.map((blog, index) => {
-        return <Card key={blog.id} card={blog} />;
-      })}
+      <br />
+      <div className="d-inline-flex">
+        {newBlogs.map((blog, index) => {
+          return (
+            <div className="container">
+              <BlogCard
+                key={blog.id}
+                id={blog.id}
+                date={blog.date}
+                image={blog.image}
+                title={blog.title}
+                post={blog.post}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ProjectCard from "./ProjectCard";
 
 /**********************************************
  * Project List Component
@@ -11,12 +12,20 @@ function ProjectList(props) {
   function renderProjects() {
     return props.projects.map((project, index) => {
       return (
-        <li key={project.id}>
+        <div key={project.id}>
           <br />
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+          />
           <Link to={`/projects/${project.id}`}>
             {project.title}
+            <br />
           </Link>
-        </li>
+
+          <ProjectCard />
+          {project.description}
+        </div>
       );
     });
   }
