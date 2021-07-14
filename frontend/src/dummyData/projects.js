@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    title: "Google",
+    title: "Sharelink",
     description: "google",
     url: "www.google.com",
     image:
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Xccelerate",
+    title: "Canvas",
     description: "Xccelerate",
     url: "xccelerate.co",
     image:
@@ -17,8 +17,17 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Facebook",
+    title: "Node Project 2",
     description: "facebook",
+    url: "www.facebook.com",
+    image:
+      "https://www.vicosys.com.hk/wp-content/uploads/2015/09/Facebook-logo-PSD.jpg",
+  },
+  {
+    id: 4,
+    title: "Web Project 1",
+    description:
+      "This application is the first frontend website we made at Xccelerate. It not only demonstrates ",
     url: "www.facebook.com",
     image:
       "https://www.vicosys.com.hk/wp-content/uploads/2015/09/Facebook-logo-PSD.jpg",

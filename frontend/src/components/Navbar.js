@@ -13,28 +13,41 @@ import {
   Link,
   Switch,
 } from "react-router-dom";
+import "../assets/Navbar.css";
 
 function Navbar() {
   return (
     <Router>
       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us Page</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blogs</Link>
-          </li>
-          <li>
-            <Link to="/resume">Resume</Link>
-          </li>
-        </ul>
+        <nav className="side">
+          <div className="side__inner">
+            <div className="top">
+              <Link className="projectLink" to="/">
+                Home
+              </Link>
+            </div>
+            <div className="medium-top">
+              <Link className="projectLink" to="/projects">
+                Projects
+              </Link>
+            </div>
+            <div className="medium">
+              <Link className="projectLink" to="/resume">
+                Resume
+              </Link>
+            </div>
+            <div className="medium-bottom">
+              <Link className="projectLink" to="/blogs">
+                Thoughts
+              </Link>
+            </div>
+            <div className="bottom">
+              <Link className="projectLink" to="/contact">
+                contact
+              </Link>
+            </div>
+          </div>
+        </nav>
       </div>
       <Switch>
         <Route exact path="/" component={HomePage} />
