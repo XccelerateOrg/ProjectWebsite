@@ -25,6 +25,15 @@ function Navbar() {
           <li>
             <Link to="/projects">Projects</Link>
           </li>
+          <li>
+            <Link to="/contact">Contact Us Page</Link>
+          </li>
+          <li>
+            <Link to="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link to="/resume">Resume</Link>
+          </li>
         </ul>
       </div>
       <Switch>
@@ -40,6 +49,10 @@ function Navbar() {
           path="/projects/:id"
           component={EachProjectPage}
         />
+        <Route path="/contact" component={ContactUsPage} />
+        <Route path="/blogs" exact component={BlogsPage} />
+        <Route path="/blogs/:id" component={EachBlogPage} />
+        <Route path="/resume" component={ResumePage} />
         <Route component={ErrorPage} />
       </Switch>
     </Router>
