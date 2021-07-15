@@ -50,6 +50,19 @@ function BlogsPage() {
     });
   };
 
+  function joinPost(post) {
+    return post.join("");
+  }
+
+  //   function replaceBreak(post) {
+  //     for (let i = 0; i < post.length; i++) {
+  //       if (post[i] === "\n") {
+  //         post[i] = "<br/>";
+  //       }
+  //     }
+  //     console.log(post);
+  //     return post;
+  //   }
   const newBlogs = filteredBlogs(search);
   console.log("new blogs", newBlogs);
   return (
@@ -73,7 +86,7 @@ function BlogsPage() {
                 date={blog.date}
                 image={blog.image}
                 title={blog.title}
-                post={blog.post}
+                post={joinPost(blog.post)}
               />
             </div>
           );

@@ -35,7 +35,7 @@ class Panel extends React.Component {
       //   array of objects
       id,
       institution,
-      position,
+      title,
       date,
       type,
       description,
@@ -60,16 +60,26 @@ class Panel extends React.Component {
           role="tab"
           onClick={activateTab}
         >
-          {institution}
+          {institution} - {title}
         </button>
         <div
           className="panel__inner"
           style={innerStyle}
           aria-hidden={!isActive}
         >
-          <p className="panel__content">{position}</p>
+          <p className="panel__content">{title}</p>
           <p className="panel__content">
-            {date} {type} {description}
+            <div className="row">
+              <div className="col">
+                {date} {type} {description}
+              </div>
+              <div className="col">
+                <img
+                  style={{ height: "250px" }}
+                  src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+                />
+              </div>
+            </div>
           </p>
         </div>
       </div>
