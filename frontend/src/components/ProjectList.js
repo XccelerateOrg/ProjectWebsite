@@ -13,28 +13,18 @@ function ProjectList(props) {
     return props.projects.map((project, index) => {
       return (
         <div key={project.id}>
-          <br />
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-          />
           <Link to={`/projects/${project.id}`}>
-            {project.title}
             <br />
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+            />
           </Link>
-
-          <ProjectCard />
-          {project.description}
         </div>
       );
     });
   }
-  return (
-    <div>
-      <h3>Project List</h3>
-      {renderProjects()}
-    </div>
-  );
+  return <div>{renderProjects()}</div>;
 }
 
 export default ProjectList;
