@@ -13,7 +13,10 @@ function BlogsPage() {
       return (
         project.title.toLowerCase().indexOf(lowerSearch) >
           -1 ||
-        project.post.toLowerCase().indexOf(lowerSearch) > -1
+        project.post
+          .join("")
+          .toLowerCase()
+          .indexOf(lowerSearch) > -1
       );
     });
   };

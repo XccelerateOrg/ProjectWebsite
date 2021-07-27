@@ -27,7 +27,7 @@ export const projects = [
     id: 4,
     title: "Web Project 1",
     description:
-      "This application is the first frontend website we made at Xccelerate. It not only demonstrates ",
+      "This application is the first frontend website we made at Xccelerate.",
     url: "www.facebook.com",
     image:
       "https://www.vicosys.com.hk/wp-content/uploads/2015/09/Facebook-logo-PSD.jpg",
