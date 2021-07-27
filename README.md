@@ -5,6 +5,8 @@
 - [ ] Go to src/dummyData and change all the appropriate data in that folder
 - [ ] Go to src/utils/utils.js and change the formspree code so that you can receive the appropriate data on your form website
 
+![Directions](gif/directions.gif)
+
 ### To Deploy
 
 - [ ] Clone this repository and make a version of your own (after updating the dataset accordingly)
